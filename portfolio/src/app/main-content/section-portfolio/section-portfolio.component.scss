@@ -1,0 +1,128 @@
+.portfolio {
+    background-color: #FFFCF3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 10vw));
+    margin-bottom: -10vw;
+    position: relative;
+    z-index: 1;
+
+}
+
+.sub-container-portfolio {
+    width: 100%;
+}
+
+// .project-cont {
+//     margin-left: calc(8%);
+//     margin-right: calc(5%);
+// }
+.headline-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: 5rem; // 82px
+        font-family: "Syne";
+        font-weight: 800;
+        color: black;
+        text-align: center;
+
+        @media(max-width: 1200px) {
+            font-size: 4.5rem;
+        }
+
+        @media(max-width: 124px) {
+            font-size: 4.2rem;
+        }
+
+        @media(max-width: 850px) {
+            font-size: 3.5rem;
+        }
+
+        @media(max-width: 700px) {
+            font-size: 3rem;
+        }
+
+        @media(max-width: 550px) {
+            font-size: 2.5rem;
+        }
+
+        @media(max-width: 450px) {
+            font-size: 2.1rem;
+        }
+
+        &:hover {
+            color: #FF9900;
+        }
+    }
+
+    p {
+        font-family: 'Overpass';
+        font-weight: 300;
+        font-size: 1.5rem; //25px
+        padding-bottom: 32px;
+        max-width: 565px;
+
+        @media(max-width: 1200px) {
+            font-size: 1.4rem;
+        }
+
+        @media(max-width: 124px) {
+            font-size: 1.3rem;
+        }
+
+        @media(max-width: 850px) {
+            font-size: 1.2rem;
+        }
+
+        @media(max-width: 700px) {
+            font-size: 1rem;
+        }
+
+        @media(max-width: 550px) {
+            width: 60%;
+        }
+
+    }
+}
+
+
+
+.arrow-container {
+    // width: 100vw;
+    height: 300px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-bottom: 48px;
+    display: flex;
+    justify-content: end;
+
+    @media(max-width: 850px) {
+        height: unset;
+        padding-top: 0;
+    }
+
+    @media(max-width: 550px) {
+        justify-content: center;
+    }
+
+    >img {
+        margin-right: calc(5%);
+
+        @media(max-width: 850px) {
+            width: 250px;
+            height: 250px;
+        }
+
+        @media(max-width: 550px) {
+            width: 200px;
+            height: 200px;
+            margin-right: 0;
+        }
+    }
+}

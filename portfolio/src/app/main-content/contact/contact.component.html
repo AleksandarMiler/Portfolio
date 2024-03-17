@@ -1,0 +1,82 @@
+<div class="contact-section" #contact>
+    <div class="headline-wrapper"><span>Say Hi!</span></div>
+    <div class="form-wrapper">
+        <span class="question">Want to diskuss a new project?</span>
+        <span class="motivational">Say hello!Let's diskuss your ideas and make it happen</span>
+
+        <div class="form-container">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+                <div class="field-wrapper">
+                    @if (name.dirty && name.value.length >= 1 || !name.valid && name.touched){
+                    <label class="show-label" for="name">Your Name</label>
+                    } @else {
+                    <span class="place-holder">Your name</span>
+                    }
+                    <input name="name" class="name-input" [class.input-selected]="name.valid || !name.valid && name.touched"
+                        #name="ngModel" [(ngModel)]="contactData.name" type="text" minlength="4" id="name" 
+                        required>
+                    @if (name.valid && name.touched){
+                    <img class="alert-image" src="../../assets/img/valid.png">
+                    }
+                    @else if (!name.valid && name.touched){
+                    <span class="field-alert">please enter your name</span>
+                    <img class="alert-image" src="../../assets/img/invalid.png">
+                    }
+
+                </div>
+                <div class="field-wrapper">
+                    @if (email.dirty && email.value.length >= 1 || !email.valid && email.touched){
+                    <label class="show-label" for="email">Your email</label>
+                    } @else {
+                    <span class="place-holder">Your email</span>
+                    }
+                   
+                    <input [class.input-selected]="email.valid || !email.valid && email.touched" #email="ngModel"
+                        [(ngModel)]="contactData.email"  name="email" type="email" id="email"  required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    @if (email.valid && email.touched){
+                    <img class="alert-image" src="../../assets/img/valid.png">
+                    }
+                    @else if (!email.valid && email.touched){
+                    <span class="field-alert">please enter your email</span>
+                    <img class="alert-image" src="../../assets/img/invalid.png">
+                    } 
+                </div>
+                <div class="field-wrapper">
+                    @if (message.dirty && message.value.length >= 1 || !message.valid && message.touched){
+                    <label class="show-label" for="message">Your message</label>
+                    } @else {
+                    <span class="place-holder">Your message</span>
+                    }
+                    <textarea [class.input-selected]="message.valid || !message.valid && message.touched"
+                        #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message"
+                        required></textarea>
+                    @if (message.valid && message.touched){
+                    <img class="alert-image" src="../../assets/img/valid.png">
+                    }
+                    @else if (!message.valid && message.touched){
+                    <span class="field-alert">please enter your message</span>
+                    <img class="alert-image" src="../../assets/img/invalid.png">
+                    }
+                    
+                </div>
+
+                <div class="check-box"><input  #checkbox="ngModel" [(ngModel)]="contactData.checkbox" [ngModelOptions]="{standalone: true}" (change)="setCheckBox($event)" type="checkbox" required>
+                    @if (!checkboxState && checkboxCount > 0 ){
+                    <span class="check-box-alert">please accept the privacy policy</span>
+                    }I
+                    've read the <a href="PrivacyPolicy">privacy policy</a> and agree of processing my data
+                    as outlined
+                </div>
+                @if(checkboxState) {
+                <button type="submit">{{ changeBtnContent() }}</button>
+                } @else{
+                <div class="inactive">{{ changeBtnContent() }}</div>
+                }
+            </form>
+        </div>
+        <div class="arrow-back-cont" (click)="goUp()"><img src="../../assets/img/icons8-up.png" alt=""></div>
+    </div>
+    <div class="success-info" [class.start-success-info]="success">Your Message has been sent! Thank you!</div>
+</div>

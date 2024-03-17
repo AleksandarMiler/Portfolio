@@ -1,0 +1,28 @@
+<div class="number-container">
+    <p class="number">01/04</p>
+</div>
+<div class="project-wrapper" (mouseover)="onMouseEnter()" (mouseout)="onMouseOut()">
+    <div class="picture" [class.filter-adj]="isHovering">
+        <img class="cover-img" src="../../assets/img/join10.png">
+        <img class="arrow-animation" [ngClass]="checkWidthAnimationArrow()"
+            src="../../../assets/img/arrow-portfolio-down2.png">
+        <div class="frame" [class.show-frame]="isHovering"></div>
+    </div>
+    
+    <div class="project-description" [ngClass]="checkWidthAnimation()">
+        <span class="name">Join</span>
+        <span class="languange">HTML | CSS | JavaScript</span>
+        <p class="description">Task manager inspired by Kanban System.
+            Create and organise tasks using drag and drop functions,
+            assign users and categories.</p>
+        <div class="btn-container">
+           <a href="#"><button>Github</button></a> 
+           <a href="#"><button>Live Test</button></a> 
+        </div>
+    </div>
+
+</div>
+
+
+<!-- [class.slide]="isHovering && checkWidth()"
+[class.rotate]="isHovering" -->

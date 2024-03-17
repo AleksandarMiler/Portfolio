@@ -1,0 +1,22 @@
+<div class="about-me-container">
+    <div class="about-me">
+        <span class="headline">About me</span>
+        <div class="section-sub-headline">
+            <div class="section-text"><span class="description">
+                    I am a front-end Developer based in Munich, Germany.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusamus omnis reprehenderit at deleniti libero ad eaque
+                    autem minus provident corrupti, culpa consequatur perferendis
+                    officiis adipisci tempora nobis magni. Sunt, illum!</span>
+                <span class="motivational">If you think i would be perfect match for your next projects, contact
+                    me!</span>
+                <button (click)="moveToContactSection()" [class.black-btn]="selected">Let's talk!</button>
+            </div>
+            <div class="image image-pop"></div>
+        </div>
+        <div class="arrow-container" #arrowOne id="mySkills">
+            <img  src="../../assets/img/{{ arrowsRight[currentArrow]}}">
+        </div>
+    </div>
+    
+</div>

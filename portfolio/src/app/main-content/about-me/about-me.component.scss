@@ -1,0 +1,227 @@
+a {
+    scroll-behavior: smooth;
+}
+
+.about-me-container {
+    background-color: #FFFCF3;
+    // height: 100vh;
+    position: relative;
+}
+
+.about-me {
+    margin-left: calc(8%);
+    margin-right: calc(5%);
+
+    // padding-top: 125px;
+    @media(max-width: 850px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.headline {
+    font-size: 5rem; //82px
+    font-family: "Syne";
+    font-weight: 800;
+    color: black;
+
+    @media(max-width: 1200px) {
+        font-size: 4.5rem;
+    }
+
+    @media(max-width: 1024px) {
+        font-size: 4.2rem;
+    }
+
+    @media(max-width: 850px) {
+        font-size: 3.5rem;
+    }
+
+    @media(max-width: 700px) {
+        font-size: 3rem;
+    }
+
+    @media(max-width: 550px) {
+        font-size: 2.5rem;
+    }
+
+    @media(max-width: 400px) {
+        font-size: 1.8rem;
+    }
+
+    &:hover {
+        color: #FF9900;
+    }
+}
+
+
+
+.image {
+    width: 475px;
+    height: 475px;
+    background-color: rgb(197, 195, 195);
+    position: relative;
+    border: none;
+    cursor: pointer;
+
+    @media(max-width: 1024px) {
+        width: 400px;
+        height: 400px;
+    }
+
+    @media(max-width: 620px) {
+        width: 300px;
+        height: 300px;
+    }
+
+    @media(max-width: 400px) {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.image.image-pop::before {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    right: -17px;
+    bottom: -17px;
+    border: solid 4px black;
+    opacity: 0;
+}
+
+.image.image-pop:hover::before,
+.image.image-popfocus::before {
+    animation: frame 2s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes frame {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.description,
+.motivational {
+    font-family: 'Overpass';
+    font-weight: 300;
+    font-size: 1.5rem; //25px
+    max-width: 500px;
+    padding-bottom: 32px;
+
+    @media(max-width: 1200px) {
+        font-size: 1.3rem;
+        max-width: 450px;
+    }
+
+    @media(max-width: 1024px) {
+        font-size: 1.2rem;
+        max-width: 400px;
+    }
+
+    @media(max-width: 500px) {
+        font-size: 1.1rem;
+        max-width: 250px;
+    }
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-sub-headline {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+
+    @media(max-width: 850px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+button {
+    width: 160px;
+    height: 68px;
+    border: 4px solid black;
+    background-color: #FFFCF3;
+    font-family: 'Overpass';
+    font-weight: 300;
+    font-size: 1.5rem; //25px
+    transition: width 1s;
+    cursor: pointer;
+
+    @media(max-width: 1200px) {
+        font-size: 1.3rem;
+    }
+
+    @media(max-width: 1024px) {
+        font-size: 1.2rem;
+    }
+
+    @media(max-width: 850px) {
+        display: none;
+    }
+
+    &:hover {
+        width: 240px;
+        font-weight: 500;
+    }
+
+}
+
+.black-btn {
+    background-color: black;
+    color: white;
+}
+
+.arrow-container {
+    // width: 100vw;
+    height: 300px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    display: flex;
+    justify-content: end;
+
+    @media(max-width: 850px) {
+        height: unset;
+        padding-top: 0;
+    }
+
+    >img {
+        @media(max-width: 850px) {
+            width: 250px;
+            height: 250px;
+        }
+
+        @media(max-width: 550px) {
+            width: 200px;
+            height: 200px;
+        }
+
+    }
+}
+    .arrow {
+        width: 250px;
+        height: 215px;
+        border: 1px solid black;
+        overflow: hidden;
+
+        >img {
+            width: 230px;
+            height: 235px;
+
+            // padding-left: calc(25%);
+
+        }
+    }

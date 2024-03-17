@@ -1,0 +1,68 @@
+<div class="nav-bar-container">
+
+    <!-- <img class="logo" src="../../assets/img/logo.png"> -->
+    <!------samo za probu ------>
+    <!-- <div class="outside-box">
+        <div class="box1"></div>
+         <div class="line"></div>
+         <div class="box2"></div>
+       </div> -->
+    <div class="outside-box logo dark" (click)="goToSection('contact')">
+        <div class="arm1"></div>
+        <div class="arm2"></div>
+        <div class="line1"></div>
+        <div class="dot dot-dark"></div>
+        <div class="line2"></div>
+        <div class="arm3"></div>
+        <div class="arm4"></div>
+    </div>
+    <div class="burger-languange">
+        <div class="languange-switch"><span class="deutsch">de</span>|<span class="english">en</span></div>
+        <img [class.d-none]="!open" (click)="startAnimationOpen()" class="burger-menu"
+            src="../../assets/img/{{ openingImages[currentImageOpen]}}">
+        <img [class.d-none]="open" (click)="startAnimationClose()" class="burger-menu"
+            src="../../assets/img/{{ closingImages[currentImageClose]}}">
+    </div>
+
+</div>
+<div class="menu" [ngClass]="{'hide-menu': !buttonPressed && appearanceCount > 0,' show-menu': buttonPressed}">
+    <div class="links-wrapper">
+        <!-- <span *ngIf="!hasRoute('/Imprint')" (click)="goToSection('aboutMe')">About me</span>
+        <span *ngIf="hasRoute('/Imprint'); hasRoute('/PrivacyPolicy')" (click)="goToSection('aboutMe')" href="">About me 1</span> 
+        <span *ngIf="!hasRoute('/Imprint')" (click)="goToSection('mySkills')">My skills</span>
+        <span *ngIf="hasRoute('/Imprint'); hasRoute('/PrivacyPolicy')" (click)="goToSection('mySkills')" href="">My skills 1</span>
+        <span *ngIf="!hasRoute('/Imprint')" (click)="goToSection('portfolio')">Portfolio</span>
+        <span *ngIf="hasRoute('/Imprint'); hasRoute('/PrivacyPolicy')" (click)="goToSection('portfolio')" href="">Portfolio 1</span> -->
+        <span *ngIf="hasRoute()" (click)="goToSection('aboutMe')" id="aboutMe1">About me <span class="frame"
+                [class.visible]="aboutMe"></span></span>
+        <span *ngIf="!hasRoute()" (click)="goToSection('aboutMe')" href="">About me <span class="frame"
+                [class.visible]="aboutMe"></span></span>
+        <span *ngIf="hasRoute()" (click)="goToSection('mySkills')" id="myskills1">My skills <span class="frame"
+                [class.visible]="mySkills"></span></span>
+        <span *ngIf="!hasRoute()" (click)="goToSection('mySkills')" href="">My skills <span class="frame"
+                [class.visible]="mySkills"></span> </span>
+        <span *ngIf="hasRoute()" (click)="goToSection('portfolio')" id="portfolio1">Portfolio <span class="frame"
+                [class.visible]="portfolio"></span></span>
+        <span *ngIf="!hasRoute()" (click)="goToSection('portfolio')" href="">Portfolio <span class="frame"
+                [class.visible]="portfolio"></span></span>
+    </div>
+</div>
+<div class="footer-menu" [ngClass]="{'hide-menu': !buttonPressed && appearanceCount > 0,' show-menu': buttonPressed}">
+    <div class="headline-wrapper"><span>Say Hi!</span></div>
+    <div class="footer-wrapper">
+
+        <div class="left">
+            <span *ngIf="hasRoute()" (click)="goToSection('contact')"
+                class="email">aleksandar.miler.85&#64;gmail.com</span>
+            <span *ngIf="!hasRoute()" (click)="goToSection('contact')"
+                class="email">aleksandar.miler.85&#64;gmail.com</span>
+        </div>
+
+        <div class="right">
+            <div class="pictures"><img src="../../assets/img/Github.png"><img src="../../assets/img/Email.png"><img
+                    src="../../assets/img/Linkedin.png"></div>
+        </div>
+    </div>
+</div><!-- ovde ide footer componenta ali bez formulara, koji svakako treba da bude napravljen -->
+
+<!-- [class.hide-menu]="appearanceCount > 0 || !buttonPressed "  [class.show-menu]="buttonPressed || appearanceCount > 0 -->

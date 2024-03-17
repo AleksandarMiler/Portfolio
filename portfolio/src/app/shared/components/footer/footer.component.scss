@@ -1,0 +1,191 @@
+.footer-wrapper {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.container-up {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+
+    @media(max-width: 800px) {
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: center;
+        min-height: 120px;
+    }
+
+    @media(max-width: 420px) {
+        min-height: 100px;
+    }
+
+
+
+
+    // >img {
+    //     width: 65px;
+    //     height: 30px;
+    //     cursor: pointer;
+
+
+    // }
+}
+
+.pictures {
+    margin-right: calc(5%);
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: 800px) {
+        margin-right: 0;
+    }
+
+    @media(max-width: 420px) {
+        width: 175px;
+    }
+
+    >a {
+        transform: translateY(0px);
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover {
+            transform: translateY(-16px);
+        }
+    }
+
+    >img {
+        width: 40px;
+        height: 40px;
+
+
+        @media(max-width: 420px) {
+            width: 35px;
+            height: 35px;
+        }
+
+
+    }
+}
+
+.legal {
+    color: #FFFCF3;
+    font-family: "Overpass";
+    font-size: 16px;
+    text-decoration: none;
+
+    @media(max-width: 700px) {
+        font-size: 15px;
+    }
+
+    &::after {
+        content: '';
+        height: 1px;
+        width: 0%;
+        background-color: #FFFCF3;
+        transition: 0.5s ease-in-out;
+        display: block;
+    }
+
+    &:hover::after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        display: block;
+        background-color: #FF9900;
+    }
+
+    &:hover {
+        font-weight: 700px;
+    }
+
+}
+
+.container-down {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 12px;
+
+    @media(max-width: 800px) {
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100px;
+    }
+
+    @media(max-width: 420px) {
+        min-height: 90px;
+
+    }
+
+    // >span {
+    //     color: #FFFCF3;
+    //     font-family: "Overpass";
+    //     font-size: 16px;
+
+    //     @media(max-width: 700px) {
+    //         font-size: 15px;
+    //     }
+    // }
+
+    // >div {
+    //     display: flex;
+    //     justify-content: space-between;
+
+
+    // }
+}
+
+.madeBy {
+    color: #FFFCF3;
+    font-family: "Overpass";
+    font-size: 16px;
+    margin-left: calc(8%);
+
+    @media(max-width: 800px) {
+        display: none;
+    }
+
+
+}
+
+.email {
+    font-family: "Overpass";
+    font-weight: 300;
+    font-size: 21px;
+    color: #FFFCF3;
+    display: none;
+    cursor: pointer;
+    transition: 1s;
+
+    @media(max-width: 800px) {
+        display: block;
+    }
+
+    @media(max-width: 420px) {
+        font-size: 17px;
+    }
+
+    &:hover {
+        color: #FF9900;
+    }
+
+
+}
+
+.link {
+    display: flex !important;
+    justify-content: end !important;
+    margin-right: calc(5%);
+
+    @media(max-width: 800px) {
+        margin-right: 0;
+    }
+}

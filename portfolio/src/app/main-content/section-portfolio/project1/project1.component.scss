@@ -1,0 +1,472 @@
+.project-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-bottom: 48px;
+    margin-left: calc(8%);
+    margin-right: calc(5%);
+
+    @media(max-width: 1100px) {
+        flex-direction: column;
+        padding-top: 32px;
+    }
+
+    @media(max-width: 900px) {
+        flex-direction: column;
+        padding-top: 48px;
+    }
+    @media(max-width: 530px) {
+        margin-left: 0; // calc(-8%)
+        margin-right: 0;
+    }
+    @media(max-width: 375px) {
+        margin-left: calc(-8%); // calc(-8%)
+        margin-right: 0;
+    }
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 475px;
+    opacity: 0;
+
+    @media(max-width: 1250px) {
+        transform: translateX(-575px);
+        transform: translateY(0);
+    }
+
+    @media(max-width: 950px) {
+        transform: translateY(0px);
+        max-width: 470px;
+    }
+
+    @media(max-width: 650px) {
+        max-width: 420px;
+    }
+
+    @media(max-width: 500px) {
+        max-width: 310px;
+    }
+    @media(max-width: 420px) {
+        max-width: 250px;
+    }
+}
+
+.slide {
+    animation: slideAnimation 2s ease-in-out;
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.slideDown {
+    @media(max-width: 420px) {
+        animation: slideDownAnimationMobile 2s ease-in-out;
+        transform: translateY(50px);
+    }
+
+    @media(min-width: 421px) and (max-width: 700px) {
+        animation: slideDownAnimationResponsive 2s ease-in-out;
+        transform: translateY(40px);
+    }
+
+    @media(min-width: 701px) and (max-width: 1400px) {
+        animation: slideDownAnimation 2s ease-in-out;
+        transform: translateY(50px);
+    }
+
+    opacity: 1;
+}
+
+.stayDown {
+    animation: slideDownAnimationMobile 2s ease-in-out;
+    transform: translateY(-35px);
+    opacity: 1;
+}
+
+@keyframes slideDownAnimation {
+    from {
+        transform: translateY(-305px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideDownAnimationResponsive {
+    from {
+
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(40px);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes slideDownAnimationMobile {
+    from {
+        transform: translateY(-130px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideAnimation {
+    from {
+        transform: translateX(-575px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.name {
+    font-size: 3rem; //45px
+    font-family: "Syne";
+    font-weight: 800;
+    color: black;
+    text-align: center;
+    padding-bottom: 12px;
+
+    @media(max-width: 1400px) {
+        font-size: 2.5rem;
+    }
+
+    @media(max-width: 1250px) {
+        font-size: 2.2rem;
+    }
+
+    @media(max-width: 950px) {
+        font-size: 2.125rem;
+    }
+
+    @media(max-width: 750px) {
+        font-size: 2rem;
+    }
+
+    @media(max-width: 675px) {
+        font-size: 1.7rem;
+    }
+}
+
+.languange {
+    font-family: 'Overpass';
+    font-weight: 400;
+    font-size: 1.3rem; //23px
+    color: #FF9900;
+    padding-bottom: 12px;
+
+    @media(max-width: 1400px) {
+        font-size: 1.2rem;
+    }
+
+    @media(max-width: 1250px) {
+        font-size: 1.1rem;
+    }
+
+    @media(max-width: 950px) {
+        font-size: 1.0rem;
+    }
+
+    @media(max-width: 750px) {
+        font-size: 0.9rem;
+    }
+
+    @media(max-width: 675px) {
+        font-size: 0.8rem;
+    }
+}
+
+.description {
+    font-family: 'Overpass';
+    font-weight: 400;
+    font-size: 1.6rem; //26px
+    color: black;
+    padding-bottom: 12px;
+
+    @media(max-width: 1400px) {
+        font-size: 1.4rem;
+    }
+
+    @media(max-width: 1250px) {
+        font-size: 1.2rem;
+    }
+
+    @media(max-width: 950px) {
+        font-size: 1.1rem;
+    }
+
+    @media(max-width: 750px) {
+        font-size: 1rem;
+    }
+
+    @media(max-width: 675px) {
+        font-size: 0.8rem;
+    }
+}
+
+.picture {
+    width: 620px;
+    height: 400px;
+    cursor: pointer;
+    filter: grayscale(1);
+    z-index: 1;
+
+    @media(max-width: 1400px) {
+        width: 570px;
+        height: 350px;
+    }
+
+    @media(max-width: 1250px) {
+        width: 520px;
+        height: 300px;
+    }
+
+    @media(max-width: 950px) {
+        width: 470px;
+        height: 280px;
+    }
+
+    @media(max-width: 650px) {
+        width: 420px;
+        height: 250px;
+    }
+
+    @media(max-width: 500px) {
+        width: 310px;
+        height: 200px;
+    }
+
+    @media(max-width: 420px) {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+.number-container {
+    display: flex;
+    justify-content: end;
+    padding-top: 24px;
+}
+
+.number {
+    font-size: 2.8rem; //45px
+    font-family: "Syne";
+    font-weight: 900;
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: calc(6%);
+
+
+    @media(max-width: 1400px) {
+        font-size: 2.7rem;
+    }
+
+    @media(max-width: 1250px) {
+        font-size: 2.6rem;
+    }
+
+    @media(max-width: 950px) {
+        font-size: 2.4rem;
+        margin-right: calc(7%);
+    }
+
+    @media(max-width: 750px) {
+        font-size: 1.9rem;
+        margin-right: calc(8%);
+    }
+
+    @media(max-width: 675px) {
+        font-size: 1.6rem;
+    }
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+}
+
+.arrow-animation {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    right: -40px;
+    z-index: 2;
+    display: none;
+
+    @media(max-width: 550px) {
+        width: 30px;
+        height: 30px;
+        right: -30px;
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.rotate {
+    display: block;
+    animation: arrowRotation 1s ease-in-out;
+    transform: rotate(-120deg) scale(1.5);
+}
+
+
+.rotateMobil {
+    display: block;
+    animation: arrowRotationMobil 1s ease-in-out;
+    transform: rotate(60deg) scale(1.5);
+}
+
+
+
+@keyframes arrowRotationMobil {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(60deg) scale(1.5);
+    }
+}
+
+@keyframes arrowRotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-120deg) scale(1.5);
+    }
+}
+
+.filter-adj {
+    animation: color 1s ease-in-out;
+    filter: grayscale(0);
+}
+
+
+@keyframes color {
+    from {
+        filter: grayscale(1);
+    }
+
+    to {
+        filter: grayscale(0);
+    }
+}
+
+.frame {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    right: -17px;
+    bottom: -17px;
+    border: solid 4px black;
+    opacity: 0;
+}
+
+.show-frame {
+    animation: frame 1s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes frame {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.arrow-portfolio {
+    position: absolute;
+    right: 0;
+    top: calc(50%);
+}
+
+.btn-container{
+    display: flex;
+    width: 100%;
+}
+
+button {
+    width: 140px;
+    height: 68px;
+    border: 4px solid black;
+    background-color: #FFFCF3;
+    font-family: 'Overpass';
+    font-weight: 300;
+    font-size: 1.3rem;
+    transition: width 1s;
+    cursor: pointer;
+    margin-right: 24px;
+
+    @media(max-width: 1100px) {
+        height: 62px;
+        font-size: 1.2rem;
+    }
+
+    @media(max-width: 950px) {
+        height: 57px;
+        font-size: 1.1rem;
+    }
+
+    @media(max-width: 650px) {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    &:hover {
+        font-weight: 500;
+        border: 4px solid #FF9900;
+        color: #FF9900;
+        animation: btn 2s ease-in-out;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes btn {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+.black-btn {
+    background-color: black;
+    color: white;
+}

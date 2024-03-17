@@ -1,0 +1,23 @@
+<div class="number-container">
+    <p class="number">02/04</p>
+</div>
+<div class="project-wrapper" (mouseover)="onMouseEnter()" (mouseout)="onMouseOut()">
+    <div class="project-description" [ngClass]="checkWidthAnimation()">
+        <span class="name">El Pollo loco</span>
+        <span class="languange">HTML | CSS | JavaScript</span>
+        <p class="description">Task manager inspired by Kanban System.
+            Create and organise tasks using drag and drop functions,
+            assign users and categories.</p>
+        <div class="btn-container">
+            <a href="#"><button>Github</button></a>
+            <a href="#"><button>Live test</button></a>
+        </div>
+    </div>
+    <div class="picture" [class.filter-adj]="isHovering">
+        <img class="cover-img" src="../../assets/img/startscreen_1.png">
+        <img [ngClass]="checkWidthAnimationArrow()" class="arrow-animation"
+            src="../../../assets/img/arrow-portfolio-down2.png">
+        <div class="frame" [class.show-frame]="isHovering"></div>
+    </div>
+
+</div>

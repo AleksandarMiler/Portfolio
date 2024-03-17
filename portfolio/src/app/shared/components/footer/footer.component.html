@@ -1,0 +1,31 @@
+<div class="footer-wrapper">
+    <div class="container-up">
+        <div class="outside-box logo white">
+            <div class="arm1"></div>
+            <div class="arm2"></div>
+            <div class="line1"></div>
+            <div class="dot dot-white"></div>
+            <div class="line2"></div>
+            <div class="arm3"></div>
+            <div class="arm4"></div>
+        </div>
+        <div class="pictures">
+            <a href="#"><img src="../../assets/img/Github.png"></a>
+            <a href="#"><img src="../../assets/img/Email.png"></a>
+            <a href="#"><img src="../../assets/img/Linkedin.png"></a>
+        </div>
+
+
+
+    </div>
+
+    <div class="container-down">
+        <span class="madeBy" (mouseover)="startAnimation()" [attr.data-value]="originalText">&#169; {{ animatedText
+            }}</span>
+        <span class="email">aleksandar.miler.85&#64;gmail.com</span>
+        <div class="link">
+            <a *ngIf="hasRoute()" class="legal" href="Imprint">Legal Notice</a>
+            <a *ngIf="!hasRoute()" class="legal" href="">Start Page</a>
+        </div>
+    </div>
+</div>
