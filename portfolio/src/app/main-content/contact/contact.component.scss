@@ -518,9 +518,25 @@ button {
     border-radius: 10px;
     align-items: center;
     position: absolute;
-    bottom: 0;
-    left: calc(25%);
-    transform: translateY(120%);
+    // bottom: 0;
+    inset: 0;
+    margin: auto;
+    // left: calc(33%);
+    transform: translateY(560%);
+    @media(max-width: 1024px) {
+        flex-direction: column;
+        width: 470px;
+    }
+   
+    @media(max-width: 900px) {
+        width: 350px;
+        font-size: 1.2rem;
+    }
+    @media(max-width: 650px) {
+        width: 250px;
+        font-size: 1rem;
+        height: 75px;
+    }
 }
 
 .start-success-info {
@@ -529,14 +545,14 @@ button {
 
 @keyframes success {
     0% {
-        transform: translateY(120%);
+        transform: translateY(560%);
     }
 
     50% {
-        transform: translateY(-220%);
+        transform: translateY(130%);
     }
 
     100% {
-        transform: translateY(120%);
+        transform: translateY(560%);
     }
 }
