@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import {TranslateService, TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
@@ -25,7 +26,16 @@ export class NavBarComponent {
   aboutMe: boolean = false;
 
 
-  constructor(private elementRef: ElementRef<HTMLElement>, public router: Router) { }
+  constructor(private elementRef: ElementRef<HTMLElement>, public router: Router, private translate: TranslateService) { 
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+
+
+  
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
 
   startAnimationOpen() {
     this.buttonPressed = true;

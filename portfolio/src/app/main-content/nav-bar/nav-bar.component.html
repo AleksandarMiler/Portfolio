@@ -17,7 +17,7 @@
         <div class="arm4"></div>
     </div>
     <div class="burger-languange">
-        <div class="languange-switch"><span class="deutsch">de</span>|<span class="english">en</span></div>
+        <div class="languange-switch"><span class="deutsch" (click)="useLanguage('de')">de</span>|<span class="english" (click)="useLanguage('en')">en</span></div>
         <img [class.d-none]="!open" (click)="startAnimationOpen()" class="burger-menu"
             src="../../assets/img/{{ openingImages[currentImageOpen]}}">
         <img [class.d-none]="open" (click)="startAnimationClose()" class="burger-menu"

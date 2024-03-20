@@ -1,8 +1,9 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 // import { LandingPageComponent } from './main-content/landing-page/landing-page.component';
 import { MainContentComponent } from './main-content/main-content.component';
+
 
 @Component({
   selector: 'app-root',

@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
+import { TranslateService, TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
@@ -32,31 +33,27 @@ export class AboutMeComponent {
   arrowsRight = ['arrow1.png', 'arrow2.png', 'arrow3.png'];
   currentArrow: number = 0;
   selected = false;
-   
+
   scrollEvent = (event: any): void => {
     const scrollTopVal = event.target.scrollingElement.scrollTop;
-    if (scrollTopVal > 1200){
-     this.startAnimationArrow();
+    if (scrollTopVal > 1200) {
+      this.startAnimationArrow();
       window.removeEventListener('scroll', this.scrollEvent, true);
     }
-    
+
   }
-    ngOnInit() {
+  ngOnInit() {
 
-      window.addEventListener('scroll', this.scrollEvent, true);
-    }
+    window.addEventListener('scroll', this.scrollEvent, true);
+  }
 
-    ngOnDestroy() {
-      window.removeEventListener('scroll', this.scrollEvent, true);
-    }
+  ngOnDestroy() {
+    window.removeEventListener('scroll', this.scrollEvent, true);
+  }
 
-  constructor() {
-
-    // this.startAnimationArrow();
-    // let arrow = document.querySelector('arrow-container')!;
-    // arrow.addEventListener('scroll', () => {
-    //   console.log('Button clicked!');
-    // });
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
   }
 
   startAnimationArrow() {
@@ -82,7 +79,7 @@ export class AboutMeComponent {
       this.scrollDown();
     }, 1000);
   }
- 
+
 
   turnSelectedOff() {
     setTimeout(() => {
@@ -90,11 +87,11 @@ export class AboutMeComponent {
     }, 1400)
   }
 
-  
-scrollDown() {
-  const element: any = document.getElementById('contact');
-    element.scrollIntoView({behavior:"smooth"});
-}
+
+  scrollDown() {
+    const element: any = document.getElementById('contact');
+    element.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 
