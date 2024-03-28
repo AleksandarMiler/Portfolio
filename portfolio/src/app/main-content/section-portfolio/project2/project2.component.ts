@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
+import { TranslateService, TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-project2',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './project2.component.html',
   styleUrl: './project2.component.scss'
 })
@@ -15,6 +16,12 @@ export class Project2Component {
   
   public innerWidth: any;
 
+  
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+  
   ngOnInit() {
     this.innerWidth = window.innerWidth;
   }

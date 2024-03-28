@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
+import { TranslateService, TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-project1',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './project1.component.html',
   styleUrl: './project1.component.scss'
 })
@@ -14,6 +15,12 @@ export class Project1Component {
 
   public innerWidth: any;
 
+  
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+  
   ngOnInit() {
     this.innerWidth = window.innerWidth;
   }
@@ -62,7 +69,7 @@ export class Project1Component {
   checkWidthAnimation() {
     if (this.isHovering == true && innerWidth > 1100) {
       return 'slide'
-    } else if (this.isHovering == true && innerWidth < 1100 && innerWidth > 500) {
+    } else if (this.isHovering == true && innerWidth < 1100) {
       return 'slideDown'
     } else {
       return null

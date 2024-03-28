@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, HostListener, OnInit, inject} from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
+import { TranslateService, TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule ],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -15,10 +16,10 @@ import { NgForm } from '@angular/forms';
 
 export class ContactComponent implements OnInit {
   clickName: boolean = false;
-  checkboxState: boolean= false;
+  checkboxState: boolean = false;
   checkboxCount: number = 0;
   success: boolean = false;
-  
+
   public innerWidth: any;
 
 
@@ -27,15 +28,16 @@ export class ContactComponent implements OnInit {
   onResize(event: any) {
     this.innerWidth = window.innerWidth;
   }
-constructor(private elementRef: ElementRef<HTMLElement>) {
-  
-}
+  constructor(private elementRef: ElementRef<HTMLElement>, private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 
-ngOnInit() {
-  this.innerWidth = window.innerWidth;
-}
+  ngOnInit() {
+    this.innerWidth = window.innerWidth;
+  }
 
-http = inject(HttpClient);
+  http = inject(HttpClient);
 
   contactData = {
     name: "",
@@ -86,7 +88,7 @@ http = inject(HttpClient);
   // onSubmit(ngForm: NgForm) {
   //   if (ngForm.valid && ngForm.submitted) {
   //     console.log(this.contactData);
-     
+
   //   }
 
 
@@ -96,14 +98,14 @@ http = inject(HttpClient);
     setTimeout(() => {
       this.clickName = true;
     }, 50);
-   
+
   }
 
   hideInputAnim() {
     setTimeout(() => {
       this.clickName = false;
-    },50);
-    
+    }, 50);
+
   }
 
   setCheckBox(event: any) {
@@ -115,7 +117,7 @@ http = inject(HttpClient);
       console.log('checkbox is not checked');
       this.checkboxState = false;
     }
-    
+
   }
   // getPlaceHolder(field: string) {
   //   if (this.clickName = true && field == "name") {
@@ -129,15 +131,15 @@ http = inject(HttpClient);
 
   goUp() {
     const element: any = document.getElementById('landingPage');
-      element.scrollIntoView({behavior:"smooth"});
+    element.scrollIntoView({ behavior: "smooth" });
   }
 
-  
+
   changeBtnContent() {
     if (innerWidth > 500) {
-      return 'Send message'
+      return 'Send1'
     } else {
-      return 'Say Hello ;)'
+      return 'Send2'
     }
   }
 }

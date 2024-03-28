@@ -24,8 +24,8 @@
             }}</span>
         <span class="email">aleksandar.miler.85&#64;gmail.com</span>
         <div class="link">
-            <a *ngIf="hasRoute()" class="legal" href="Imprint">Legal Notice</a>
-            <a *ngIf="!hasRoute()" class="legal" href="">Start Page</a>
+            <a *ngIf="hasRoute()" class="legal" href="Imprint">{{ 'legal' | translate }}</a>
+            <a *ngIf="!hasRoute()" class="legal" href="">{{ 'start' | translate }}</a>
         </div>
     </div>
 </div>
