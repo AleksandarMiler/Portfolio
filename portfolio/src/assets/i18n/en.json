@@ -45,7 +45,9 @@
     "Send1" : "Send Message",
     "Send2" : "Say Hello :)",
     "legal" : "Legal Notice",
-    "start" : "Start Page"
+    "start" : "Start Page",
+    "skills" : "My Skills", 
+    "sayHi" : "Say Hi"
 
 
 }

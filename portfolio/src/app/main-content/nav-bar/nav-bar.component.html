@@ -33,13 +33,13 @@
         <span *ngIf="hasRoute('/Imprint'); hasRoute('/PrivacyPolicy')" (click)="goToSection('mySkills')" href="">My skills 1</span>
         <span *ngIf="!hasRoute('/Imprint')" (click)="goToSection('portfolio')">Portfolio</span>
         <span *ngIf="hasRoute('/Imprint'); hasRoute('/PrivacyPolicy')" (click)="goToSection('portfolio')" href="">Portfolio 1</span> -->
-        <span *ngIf="hasRoute()" (click)="goToSection('aboutMe')" id="aboutMe1">About me <span class="frame"
+        <span *ngIf="hasRoute()" (click)="goToSection('aboutMe')" id="aboutMe1">{{ 'aboutMe' | translate }} <span class="frame"
                 [class.visible]="aboutMe"></span></span>
-        <span *ngIf="!hasRoute()" (click)="goToSection('aboutMe')" href="">About me <span class="frame"
+        <span *ngIf="!hasRoute()" (click)="goToSection('aboutMe')" href="">{{ 'aboutMe' | translate }} <span class="frame"
                 [class.visible]="aboutMe"></span></span>
-        <span *ngIf="hasRoute()" (click)="goToSection('mySkills')" id="myskills1">My skills <span class="frame"
+        <span *ngIf="hasRoute()" (click)="goToSection('mySkills')" id="myskills1">{{ 'skills' | translate }} <span class="frame"
                 [class.visible]="mySkills"></span></span>
-        <span *ngIf="!hasRoute()" (click)="goToSection('mySkills')" href="">My skills <span class="frame"
+        <span *ngIf="!hasRoute()" (click)="goToSection('mySkills')" href="">{{ 'skills' | translate }} <span class="frame"
                 [class.visible]="mySkills"></span> </span>
         <span *ngIf="hasRoute()" (click)="goToSection('portfolio')" id="portfolio1">Portfolio <span class="frame"
                 [class.visible]="portfolio"></span></span>
@@ -48,7 +48,7 @@
     </div>
 </div>
 <div class="footer-menu" [ngClass]="{'hide-menu': !buttonPressed && appearanceCount > 0,' show-menu': buttonPressed}">
-    <div class="headline-wrapper"><span>Say Hi!</span></div>
+    <div class="headline-wrapper"><span>{{ 'sayHi' | translate }}!</span></div>
     <div class="footer-wrapper">
 
         <div class="left">
