@@ -17,8 +17,8 @@ export class FooterComponent {
   }
 
   public originalText = 'Aleksandar Miler 2024';
-
   public animatedText = this.originalText;
+
 
   public startAnimation(): void {
     const letters = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -38,13 +38,7 @@ export class FooterComponent {
   }
 
 
-  //  hasRoute(route: string ) {
-  //   return this.router.url.includes(route);
-  //  }
-
-
   hasRoute() {
-
     if (this.router.url == '/') {
       return true
     } else {

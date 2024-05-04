@@ -8,18 +8,18 @@
     // z-index: -1;
 }
 
-.headline-wrapper {
+ .headline-wrapper {
     padding-top: 72px;
     padding-bottom: 72px;
     display: flex;
     justify-content: flex-start;
 
-    @media(max-width: 900px) {
+     @media(max-width: 900px) {
         padding-bottom: 0;
         padding-top: 0;
     }
 
-    @media(max-width: 450px) {
+     @media(max-width: 450px) {
         padding-top: 16px;
         justify-content: center;
 
@@ -34,46 +34,41 @@
         padding: 72px;
         margin-left: calc(2%);
 
-        @media(max-width: 1250px) {
+         @media(max-width: 1250px) {
             font-size: 4.5rem;
             margin-left: calc(1%);
         }
 
-        @media(max-width: 900px) {
+         @media(max-width: 900px) {
             font-size: 4rem;
             margin-left: 0;
         }
 
-        @media(max-width: 900px) {
+         @media(max-width: 900px) {
             font-size: 3.5rem;
         }
 
-        @media(max-width: 650px) {
+         @media(max-width: 650px) {
             font-size: 3rem;
-            // padding-left: 35px !important;
+        // padding-left: 35px !important;
 
         }
 
-        @media(max-width: 450px) {
+         @media(max-width: 450px) {
             font-size: 2.5rem;
             // padding-left: 20px !important;
             padding-bottom: 24px;
-
-
         }
 
-        &:hover {
+         &:hover {
             color: #FF9900;
         }
     }
 }
 
-
 .form-container {
     display: flex;
     justify-content: center;
-
-
 }
 
 form {
@@ -138,9 +133,6 @@ input {
     }
 }
 
-// .field-wrapper:hover,
-// select:hover{
-
 input:hover,
 select:hover {
     animation: inputHover 1s ease-in-out;
@@ -194,10 +186,6 @@ textarea {
     @media(max-width: 450px) {
         width: 250px;
     }
-
-    // &:hover {
-    //     border: 1px solid #FFFCF3;
-    // }
 }
 
 
@@ -208,7 +196,6 @@ select:hover {
     box-shadow: 0 0 0 2px #FFFCF3;
 }
 
-//   [class.input-selected]="name.dirty && name.invalid"
 
 label {
     color: #FFFCF3;
@@ -217,8 +204,6 @@ label {
     left: 14px;
     background-color: black;
     opacity: 0;
-    // width: 95px;
-    // text-align: center;
     font-family: 'Overpass';
     font-size: 16px;
 
@@ -240,12 +225,6 @@ label {
     animation: showLabel 1s ease-in-out;
     opacity: 1;
 }
-
-// input:focus::placeholder {
-
-//     color: transparent;
-
-//     } 
 
 .place-holder {
     position: absolute;
@@ -300,7 +279,6 @@ label {
 .motivational {
     font-family: 'Overpass';
     font-size: 1.6rem; //26px
-    // font-weight: 700;
     color: #FFFCF3;
     padding-bottom: 16px;
 
@@ -411,7 +389,6 @@ button {
     cursor: pointer;
     color: #FFFCF3;
 
-    // opacity: 0;
     @media(max-width: 900px) {
         width: 250px;
         height: 55px;
@@ -526,15 +503,17 @@ button {
     margin: auto;
     // left: calc(33%);
     transform: translateY(645%);
+
     @media(max-width: 1024px) {
         flex-direction: column;
         width: 470px;
     }
-   
+
     @media(max-width: 900px) {
         width: 350px;
         font-size: 1.2rem;
     }
+
     @media(max-width: 650px) {
         width: 250px;
         font-size: 1rem;

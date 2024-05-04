@@ -3,7 +3,6 @@
 }
 
 .nav-bar-container {
-    // width: 100vw;
     height: 90px;
     background-color: #FFFCF3;
     display: flex;
@@ -34,11 +33,6 @@
     font-family: 'Syne';
     font-size: 1.5rem;
     font-weight: 500;
-   
-
-    >span {
-       
-    }
 }
 
 .deutsch {
@@ -72,12 +66,12 @@
         transform: scale(1.1);
     }
 }
+
 .logo {
     margin-left: calc(7%);
 }
 
 .burger-menu {
-    // margin-right: calc(5%);
     transition: burger-menu 0.5s ease-in;
     cursor: pointer;
 }
@@ -97,10 +91,7 @@
     @media(max-width: 900px) {
         height: 65vh;
     }
-
 }
-
-
 
 .links-wrapper {
     display: flex;
@@ -150,7 +141,6 @@
         @media(max-width: 520px) {
             font-size: 3.5rem;
             width: 400px;
-
         }
 
         @media(max-width: 470px) {
@@ -158,8 +148,6 @@
             width: 245px;
             height: 75px;
         }
-
-
 
         &::before {
             content: '';
@@ -240,8 +228,6 @@
     }
 }
 
-
-
 .hide-menu {
     animation: 1s MenuOut ease-in-out;
     transform: translateY(140%);
@@ -256,7 +242,6 @@
         transform: translateY(140%);
     }
 }
-
 
 .footer-wrapper {
     background-color: black;
@@ -283,19 +268,10 @@
         margin-left: 0;
     }
 
-    // >span {
-    //     color: #FFFCF3;
-    //     font-family: "Overpass";
-    //     font-size: 16px;
-    // }
-
-
     >img {
         width: 65px;
         height: 30px;
         cursor: pointer;
-
-
     }
 }
 
@@ -328,13 +304,8 @@
             &:hover {
                 transform: translateY(-16px);
             }
-
-
         }
     }
-
-
-
 }
 
 .email {
@@ -351,7 +322,6 @@
 
     &:hover {
         color: #FF9900;
-
     }
 }
 
@@ -359,7 +329,6 @@
 .headline-wrapper {
     padding-top: 100px;
 
-    // padding-bottom: 72px;
     @media(max-width: 1400px) {
         padding-top: 125px;
     }
@@ -398,13 +367,14 @@
         @media(max-width: 620px) {
             font-size: 2.5rem;
         }
+
         @media(max-width: 500px) {
             font-size: 2.3rem;
         }
+
         @media(max-width: 420px) {
             font-size: 2.1rem;
         }
-
 
         &:hover {
             color: #FF9900;
@@ -443,436 +413,3 @@
         opacity: 1;
     }
 }
-
-//////POkusaj 2/////////////
-// .outside-box {
-//     width: 80px;
-//     height: 60px;
-//     background-color: #FFFCF3;
-//     position: relative;
-
-//     cursor: pointer;
-
-//     &:hover {
-//         >.arm1 {
-//             transform: rotate(110deg);
-//             top: calc(48%);
-//             left: calc(-8%);
-//         }
-
-//         >.arm2 {
-//             transform: rotate(70deg);
-//             top: calc(48%);
-//             left: calc(4%);
-//         }
-
-//         >.arm3 {
-//             transform: rotate(70deg);
-//             top: calc(49%);
-//             right: calc(44%);
-//         }
-
-//         >.arm4 {
-//             transform: rotate(-70deg);
-//             top: calc(48%);
-//             right: calc(54%);
-//         }
-
-//         >.line1 {
-
-//             top: calc(48%);
-//             left: calc(48%);
-//             transform: rotate(70deg);
-//         }
-
-//         >.line2 {
-//             top: calc(48%);
-//             left: calc(38%);
-
-//             transform: rotate(-70deg);
-//         }
-
-//         >.dot {
-//             width: 6px;
-//             top: calc(55%);
-//             left: calc(54%);
-//         }
-//     }
-// }
-
-
-// .arm1 {
-//     position: absolute;
-//     width: 25px;
-//     height: 4px;
-//     background-color: black;
-//     border-radius: 4px;
-//     transition: 1s ease-in-out;
-//     /* first position */
-//     transform: rotate(50deg);
-//     top: calc(52%);
-//     left: 0;
-//     /* final position */
-//     //   transform: rotate(110deg);
-//     // top: calc(48%);
-//     // left:calc(-8%);
-
-// }
-
-// .arm2 {
-//     position: absolute;
-//     width: 25px;
-//     height: 4px;
-//     background-color: black;
-//     border-radius: 4px;
-//     transition: 1s ease-in-out;
-//     /* first position */
-//     transform: rotate(-50deg);
-//     top: calc(24%);
-//     left: 0;
-//     /* final position */
-//     // transform: rotate(70deg);
-//     // top: calc(47%);
-//     // left: calc(4%);
-// }
-
-// .arm3 {
-//     position: absolute;
-//     width: 25px;
-//     height: 4px;
-//     background-color: black;
-//     border-radius: 4px;
-//     transition: 1s ease-in-out;
-//     /* first position */
-//     transform: rotate(50deg);
-//     top: calc(24%);
-//     right: 0;
-//     /* final position */
-
-//     // transform: rotate(80deg);
-//     // top: calc(50%);
-//     // right: calc(38%);
-// }
-
-// .arm4 {
-//     position: absolute;
-//     width: 25px;
-//     height: 4px;
-//     background-color: black;
-//     border-radius: 4px;
-//     transition: 1s ease-in-out;
-//     /* first position */
-//     transform: rotate(-50deg);
-//     top: calc(52%);
-//     right: 0;
-//     /* final position */
-//     // transform: rotate(-70deg);
-//     // top: calc(48%);
-//     // right: calc(47%);
-// }
-
-
-// .line1 {
-//     background-color: black;
-
-//     height: 4px;
-//     position: absolute;
-//     border-radius: 4px;
-//     transition: 1s ease-in-out;
-//     /* first position */
-//     top: calc(15%);
-//     width: 25px;
-//     left: calc(35%);
-//     transform: rotate(-72deg);
-//     /* final position */
-//     // width: 30px;
-//     // top: calc(48%);
-//     // left: calc(50%);
-//     // transform: rotate(70deg);
-//     z-index: 1;
-// }
-
-
-// .line2 {
-//     background-color: black;
-
-//     height: 4px;
-//     border-radius: 4px;
-//     position: absolute;
-//     transition: 1s ease-in-out;
-//     /* first position */
-//     top: calc(52%);
-//     width: 25px;
-//     left: calc(27%);
-//     transform: rotate(-73deg);
-//     /* final position */
-//     // top: calc(50%);
-//     // left: calc(38%);
-//     // width: 30px;
-//     // transform: rotate(-70deg);
-
-//     z-index: 1;
-// }
-
-// .dot {
-//     background-color: black;
-//     height: 4px;
-//     position: absolute;
-//     border-radius: 4px;
-//     transition: 1s ease-in-out;
-//     /* first position */
-//     top: calc(18%);
-//     // width: 25px;
-//     left: calc(36%);
-//     transform: rotate(-72deg);
-//     /* final position */
-//     // width: 6px;
-//     // top: calc(50%);
-//     // left: calc(59%);
-
-//     /*   z-index: 1; */
-// }
-
-// ++++++Pokusaj 3**********//
-
-
-
-
-
-
-/////////////////Logo sa posla /////////////////////////////////////
-
-// .outside-box {
-//     width: 60px;
-//     height: 50px;
-//     background-color: #FFFCF3;
-//     position: relative;
-
-
-//     &:hover {
-//         >.arm1 {
-//             top: calc(25%);
-//             transform: rotate(-60deg);
-//         }
-
-//         >.arm2 {
-//             top: calc(51%);
-//             transform: rotate(60deg);
-//             left: calc(0%);
-//         }
-
-//         >.arm3 {
-//             top: calc(54%);
-//             left: calc(25%);
-//             transform: rotate(-70deg);
-//             border-top-right-radius: 0px;
-//             border-bottom-right-radius: 0px;
-//         }
-
-//         >.arm4 {
-//             top: calc(20%);
-//             transform: rotate(-71deg);
-//             left: calc(35%);
-//         }
-
-//         >.line1 {
-//             top: calc(51%);
-//             left: calc(60%);
-//             transform: rotate(-60deg);
-
-//         }
-
-//         >.line2 {
-//             top: calc(25%);
-//             left: calc(60%);
-//             transform: rotate(60deg);
-//         }
-
-//         >.dot {
-//             top: calc(39%);
-//             left: calc(42%);
-//             border-left: none;
-//             border-top: none;
-//             z-index: 2;
-//         }
-//     }
-
-// }
-
-
-
-// /*.parent:hover .child */
-
-
-
-// .arm1 {
-//     position: absolute;
-//     width: 20px;
-//     height: 5px;
-//     background-color: black;
-//     border-radius: 4px;
-//     top: calc(40%);
-//     transform: rotate(-70deg);
-//     transition: 1s ease-in-out;
-// }
-
-
-
-// // .outside-box:hover .arm1 {
-
-// //     top: calc(25%);
-
-// //     transform: rotate(-60deg);
-
-
-
-// // }
-
-// .arm2 {
-//     position: absolute;
-//     width: 20px;
-//     height: 5px;
-//     background-color: black;
-//     border-radius: 4px;
-//     top: calc(40%);
-//     transform: rotate(70deg);
-//     left: calc(10%);
-//     transition: 1s ease-in-out;
-// }
-
-
-
-// // .outside-box:hover .arm2 {
-
-// //     top: calc(51%);
-
-// //     transform: rotate(60deg);
-
-// //     left: calc(0%);
-
-// // }
-
-// .dot {
-//     position: absolute;
-//     width: 5px;
-//     height: 5px;
-//     background-color: black;
-//     border-radius: 4px;
-//     top: calc(45%);
-//     left: calc(15%);
-//     transition: 1s ease-in-out;
-//     border-left: 0.5px solid #FFFCF3;
-//     border-top: 0.5px solid #FFFCF3;
-// }
-
-
-
-// // .outside-box:hover .dot {
-
-// //     top: calc(39%);
-// //     left: calc(42%);
-// //     z-index: 2;
-
-// // }
-
-
-
-// .arm3 {
-//     position: absolute;
-//     width: 20px;
-//     height: 5px;
-//     background-color: black;
-//     border-radius: 4px;
-//     top: calc(40%);
-//     left: calc(25%);
-//     transform: rotate(-70deg);
-//     transition: 1s ease-in-out;
-// }
-
-
-
-// // .outside-box:hover .arm3 {
-// //     top: calc(54%);
-// //     left: calc(25%);
-// //     transform: rotate(-70deg);
-// //     border-top-right-radius: 0px;
-// //     border-bottom-right-radius: 0px;
-
-// // }
-
-
-
-// .arm4 {
-//     position: absolute;
-//     width: 20px;
-//     height: 5px;
-//     background-color: black;
-//     border-radius: 4px;
-//     top: calc(40%);
-//     transform: rotate(70deg);
-//     left: calc(35%);
-//     transition: 1s ease-in-out;
-// }
-
-
-
-// // .outside-box:hover .arm4 {
-
-
-
-// //     top: calc(20%);
-// //     transform: rotate(-71deg);
-// //     left: calc(35%);
-// // }
-
-
-
-// .line1 {
-//     position: absolute;
-//     width: 20px;
-//     height: 5px;
-//     background-color: black;
-//     border-radius: 4px;
-//     top: calc(40%);
-//     left: calc(45%);
-//     transform: rotate(-70deg);
-//     transition: 1s ease-in-out;
-// }
-
-
-
-// // .outside-box:hover .line1 {
-
-
-
-// //     top: calc(51%);
-// //     left: calc(60%);
-// //     transform: rotate(-60deg);
-
-// // }
-
-// .line2 {
-//     position: absolute;
-//     width: 20px;
-//     height: 5px;
-//     background-color: black;
-//     border-radius: 4px;
-//     top: calc(40%);
-//     left: calc(55%);
-//     transform: rotate(70deg);
-//     transition: 1s ease-in-out;
-// }
-
-
-
-// // .outside-box:hover .line2 {
-
-// //     top: calc(25%);
-// //     left: calc(60%);
-// //     transform: rotate(60deg);
-
-// // }
-
-// /*first position*/
-
-// /*second position*/

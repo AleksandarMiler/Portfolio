@@ -3,23 +3,10 @@
         <div class="headline-container"><span class="headline">{{ 'skills' | translate}}</span></div>
         <div class="skills-list">
             <div class="skills-wrapper">
-
-                <!-- <div *ngFor="let group of groupedSkills" class="skill-group">
-                    <div *ngFor="let skill of group" class="skill-element">
-                      <img class="icon" [src]="'../../assets/img/' + skill.image">
-                      <span>{{ skill.text }}</span>
-                    </div>
-                  </div> -->
-
-
-
                 <div *ngFor="let item of skills" class="skill-element"><img class="icon"
                         src="../../assets/img/{{ item.image }}"><span>{{ item.text }}</span></div>
-
-
             </div>
         </div>
-        
     </div>
     <div class="arrow-container" id="portfolio">
         <img  src="../../assets/img/{{ arrowsLeft[currentArrowLeft]}}">

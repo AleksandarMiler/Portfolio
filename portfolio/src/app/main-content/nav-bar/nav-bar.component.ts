@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
-import {TranslateService, TranslateModule} from "@ngx-translate/core";
+import { TranslateService, TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [CommonModule, TranslateModule ],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
@@ -26,16 +26,16 @@ export class NavBarComponent {
   aboutMe: boolean = false;
 
 
-  constructor(private elementRef: ElementRef<HTMLElement>, public router: Router, private translate: TranslateService) { 
+  constructor(private elementRef: ElementRef<HTMLElement>, public router: Router, private translate: TranslateService) {
     translate.setDefaultLang('en');
     translate.use('en');
   }
 
 
-  
   useLanguage(language: string): void {
     this.translate.use(language);
-}
+  }
+
 
   startAnimationOpen() {
     this.buttonPressed = true;
@@ -88,12 +88,12 @@ export class NavBarComponent {
       setTimeout(() => {
         this.aboutMe = false;
       }, 500);
-    } else if(name == 'mySkills' ) {
+    } else if (name == 'mySkills') {
       this.mySkills = true;
       setTimeout(() => {
         this.mySkills = false;
       }, 500);
-    } else if(name == 'portfolio') {
+    } else if (name == 'portfolio') {
       this.portfolio = true;
       setTimeout(() => {
         this.portfolio = false;
@@ -108,7 +108,6 @@ export class NavBarComponent {
       element.scrollIntoView({ behavior: "smooth" });
     }, 500);
   }
-
 
 
   hasRoute() {

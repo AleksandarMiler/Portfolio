@@ -10,10 +10,8 @@ import { TranslateService, TranslateModule } from "@ngx-translate/core";
   styleUrl: './project2.component.scss'
 })
 export class Project2Component {
-  // selected = false;
   isHovering = false;
 
-  
   public innerWidth: any;
 
   
@@ -22,23 +20,23 @@ export class Project2Component {
     translate.use('en');
   }
   
+
   ngOnInit() {
     this.innerWidth = window.innerWidth;
   }
 
   @HostListener('window:resize', ['$event'])
 
+
   onResize(event: any) {
     this.innerWidth = window.innerWidth;
-    console.log(this.innerWidth);
-
   }
+
+
   onMouseEnter() {
-    console.log('Hover over image')
-
     this.isHovering = true;
-
   }
+
 
   onMouseOut() {
     if (this.innerWidth < 500 && this.isHovering == true) { //ovaj deo je proba za innerwidth < 500px, inace je bilo  this.isHovering = false;
@@ -46,22 +44,9 @@ export class Project2Component {
     } else {
       this.isHovering = false;
     }
-    console.log('Hover over image has finished')
   }
 
 
-  // moveToContactSection() {
-  //   setTimeout(() => {
-  //     this.selected = true;
-  //   }, 500)
-  //   this.turnSelectedOff();
-  // }
-
-  // turnSelectedOff() {
-  //   setTimeout(() => {
-  //     this.selected = false;
-  //   }, 1400)
-  // }
   checkWidthAnimation() {
     if (this.isHovering == true && innerWidth > 1100) {
       return 'slide'
@@ -72,6 +57,7 @@ export class Project2Component {
     }
   }
 
+  
   checkWidthAnimationArrow() {
     if (this.isHovering == true && innerWidth > 1100) {
       return 'rotate'

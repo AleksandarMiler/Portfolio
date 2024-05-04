@@ -19,7 +19,6 @@ export class ContactComponent implements OnInit {
   checkboxState: boolean = false;
   checkboxCount: number = 0;
   success: boolean = false;
-
   public innerWidth: any;
 
 
@@ -58,6 +57,7 @@ export class ContactComponent implements OnInit {
     },
   };
 
+
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -78,6 +78,7 @@ export class ContactComponent implements OnInit {
     }
   }
 
+
   showSuccesAnimation() {
     this.success = true;
     setTimeout(() => {
@@ -85,28 +86,20 @@ export class ContactComponent implements OnInit {
     }, 3500);
   }
 
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.valid && ngForm.submitted) {
-  //     console.log(this.contactData);
-
-  //   }
-
-
-  // }
 
   showInputAnim() {
     setTimeout(() => {
       this.clickName = true;
     }, 50);
-
   }
+
 
   hideInputAnim() {
     setTimeout(() => {
       this.clickName = false;
     }, 50);
-
   }
+
 
   setCheckBox(event: any) {
     if (event.target.checked) {
@@ -117,17 +110,7 @@ export class ContactComponent implements OnInit {
       console.log('checkbox is not checked');
       this.checkboxState = false;
     }
-
   }
-  // getPlaceHolder(field: string) {
-  //   if (this.clickName = true && field == "name") {
-  //     return "your name"
-  //   } else if (this.clickName = true && field == "email") {
-  //     return "your email"
-  //   } else {
-  //     return ""
-  //   }
-  // }
 
   goUp() {
     const element: any = document.getElementById('landingPage');

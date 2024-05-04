@@ -10,9 +10,7 @@ import { TranslateService, TranslateModule } from "@ngx-translate/core";
   styleUrl: './project1.component.scss'
 })
 export class Project1Component {
-  // selected = false;
   isHovering = false;
-
   public innerWidth: any;
 
   
@@ -21,6 +19,7 @@ export class Project1Component {
     translate.use('en');
   }
   
+
   ngOnInit() {
     this.innerWidth = window.innerWidth;
   }
@@ -31,12 +30,14 @@ export class Project1Component {
     this.innerWidth = window.innerWidth;
   }
 
+
   onMouseEnter() {
     this.isHovering = true;
   }
 
+
   onMouseOut() {
-    if (this.innerWidth < 500 && this.isHovering == true) { //ovaj deo je proba za innerwidth < 500px, inace je bilo  this.isHovering = false;
+    if (this.innerWidth < 500 && this.isHovering == true) { 
       this.isHovering == true;
     } else {
       this.isHovering = false;
@@ -45,19 +46,6 @@ export class Project1Component {
   }
 
 
-  // moveToContactSection() {
-  //   setTimeout(() => {
-  //     this.selected = true;
-  //   }, 500)
-  //   this.turnSelectedOff();
-  // }
-
-  // turnSelectedOff() {
-  //   setTimeout(() => {
-  //     this.selected = false;
-  //   }, 1400)
-  // }
-
   checkWidth() {
     if (innerWidth > 1100) {
       return true
@@ -65,6 +53,7 @@ export class Project1Component {
       return false
     }
   }
+
 
   checkWidthAnimation() {
     if (this.isHovering == true && innerWidth > 1100) {
@@ -76,6 +65,7 @@ export class Project1Component {
     }
   }
 
+
   checkWidthAnimationArrow() {
     if (this.isHovering == true && innerWidth > 1100) {
       return 'rotate'
@@ -85,26 +75,4 @@ export class Project1Component {
       return null
     }
   }
-  // resizeEvent = (event: any): void => {
-  //   const currentWidth = event.target.resizeElement.innerWidth;
-  //   if (currentWidth > 1100){
-  //   //  this.startAnimationArrowLeft();
-  //     window.removeEventListener('onresize', this.resizeEvent, true);
-  //   }
-
-  // }
-  //   ngOnInit() {
-  //     window.addEventListener('onresize', this.resizeEvent, true);
-  //   }
-
-  //   ngOnDestroy() {
-  //     window.removeEventListener('onresize', this.resizeEvent, true);
-  //   }
-
-
-
-
-
 }
-
-// if (this.isHovering == true && innerWidth < 1100)
