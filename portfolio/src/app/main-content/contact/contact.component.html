@@ -59,9 +59,7 @@
                     <span class="field-alert"> {{'enterMessage' | translate }}</span>
                     <img class="alert-image" src="../../assets/img/invalid.png">
                     }
-                    
                 </div>
-
                 <div class="check-box"><input  #checkbox="ngModel" [(ngModel)]="contactData.checkbox" [ngModelOptions]="{standalone: true}" (change)="setCheckBox($event)" type="checkbox" required>
                     @if (!checkboxState && checkboxCount > 0 ){
                     <span class="check-box-alert">{{ 'acceptPolicy' | translate }}</span>

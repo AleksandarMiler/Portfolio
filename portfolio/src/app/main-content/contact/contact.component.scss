@@ -1,3 +1,5 @@
+@import "../main-content.component.scss";
+
 .contact-section {
     min-height: 500px;
     background-color: black;
@@ -372,7 +374,6 @@ label {
         &:hover {
             color: #fab040;
         }
-
     }
 }
 
@@ -400,141 +401,8 @@ button {
         height: 45px;
         font-size: 20px;
     }
-
     &:hover {
         width: 340px;
         font-weight: 500;
-    }
-}
-
-.inactive {
-    width: 252px;
-    height: 60px;
-    border: 4px solid #BBBBBB;
-    background-color: black;
-    font-family: 'Overpass';
-    font-weight: 300;
-    font-size: 25px;
-    color: #BBBBBB;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media(max-width: 900px) {
-        width: 242px;
-        height: 50px;
-        font-size: 23px;
-    }
-
-    @media(max-width: 550px) {
-        width: 220px;
-        height: 45px;
-        font-size: 20px;
-    }
-}
-
-.show-button {
-    opacity: 1;
-}
-
-.check-box-alert {
-    position: absolute;
-    bottom: -22px;
-    left: 0;
-    color: red;
-    font-family: 'Overpass';
-    padding-top: 8px;
-    font-size: 12px;
-    width: 600px;
-
-    @media(max-width: 900px) {
-        width: 500px;
-    }
-
-    @media(max-width: 700px) {
-        width: 425px;
-    }
-
-    @media(max-width: 550px) {
-        width: 370px;
-    }
-
-    @media(max-width: 450px) {
-        width: 250px;
-    }
-}
-
-.arrow-back-cont {
-    position: absolute;
-    bottom: 0;
-    right: calc(3%);
-    transform: translateY(36px);
-    cursor: pointer;
-    transition: transform 1s ease-in-out;
-
-    @media(max-width: 700px) {
-        right: calc(2%);
-    }
-
-    @media(max-width: 550px) {
-        display: none;
-    }
-
-    &:hover {
-        transform: translateY(4px);
-    }
-}
-
-.success-info {
-    width: 550px;
-    height: 100px;
-    background-color: black;
-    border: 4px solid white;
-    color: #FF9900;
-    display: flex;
-    justify-content: center;
-    font-family: 'Overpass';
-    font-size: 1.5rem;
-    border-radius: 10px;
-    align-items: center;
-    position: absolute;
-    // bottom: 0;
-    inset: 0;
-    margin: auto;
-    // left: calc(33%);
-    transform: translateY(645%);
-
-    @media(max-width: 1024px) {
-        flex-direction: column;
-        width: 470px;
-    }
-
-    @media(max-width: 900px) {
-        width: 350px;
-        font-size: 1.2rem;
-    }
-
-    @media(max-width: 650px) {
-        width: 250px;
-        font-size: 1rem;
-        height: 75px;
-    }
-}
-
-.start-success-info {
-    animation: success 3s ease-in-out;
-}
-
-@keyframes success {
-    0% {
-        transform: translateY(645%);
-    }
-
-    50% {
-        transform: translateY(130%);
-    }
-
-    100% {
-        transform: translateY(645%);
     }
 }

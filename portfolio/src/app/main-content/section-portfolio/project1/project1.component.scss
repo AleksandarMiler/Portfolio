@@ -1,7 +1,8 @@
+@import  "../section-portfolio.component.scss";
+
 .project-container {
     display: flex;
     flex-direction: column;
-
 }
 
 .project-wrapper {
@@ -17,7 +18,6 @@
         flex-direction: column;
         padding-top: 32px;
     }
-
     @media(max-width: 900px) {
         flex-direction: column;
         padding-top: 48px;
@@ -29,105 +29,6 @@
     @media(max-width: 375px) {
         margin-left: calc(-8%); // calc(-8%)
         margin-right: 0;
-    }
-}
-
-.project-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 475px;
-    opacity: 0;
-
-    @media(max-width: 1250px) {
-        transform: translateX(-575px);
-        transform: translateY(0);
-    }
-
-    @media(max-width: 950px) {
-        transform: translateY(0px);
-        max-width: 470px;
-    }
-
-    @media(max-width: 650px) {
-        max-width: 420px;
-    }
-
-    @media(max-width: 500px) {
-        max-width: 310px;
-    }
-    @media(max-width: 420px) {
-        max-width: 250px;
-    }
-}
-
-.slide {
-    animation: slideAnimation 2s ease-in-out;
-    transform: translateX(0px);
-    opacity: 1;
-}
-
-.slideDown {
-    @media(max-width: 420px) {
-        animation: slideDownAnimationMobile 2s ease-in-out;
-        transform: translateY(50px);
-    }
-
-    @media(min-width: 421px) and (max-width: 700px) {
-        animation: slideDownAnimationResponsive 2s ease-in-out;
-        transform: translateY(40px);
-    }
-
-    @media(min-width: 701px) and (max-width: 1400px) {
-        animation: slideDownAnimation 2s ease-in-out;
-        transform: translateY(50px);
-    }
-
-    opacity: 1;
-}
-
-.stayDown {
-    animation: slideDownAnimationMobile 2s ease-in-out;
-    transform: translateY(-35px);
-    opacity: 1;
-}
-
-@keyframes slideDownAnimation {
-    from {
-        transform: translateY(-305px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(50px);
-        opacity: 1;
-    }
-}
-
-
-@keyframes slideDownAnimationResponsive {
-    from {
-
-        transform: translateY(-200px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(40px);
-        opacity: 1;
-    }
-}
-
-
-
-@keyframes slideDownAnimationMobile {
-    from {
-        transform: translateY(-130px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(50px);
-        opacity: 1;
     }
 }
 
@@ -154,19 +55,15 @@
     @media(max-width: 1400px) {
         font-size: 2.5rem;
     }
-
     @media(max-width: 1250px) {
         font-size: 2.2rem;
     }
-
     @media(max-width: 950px) {
         font-size: 2.125rem;
     }
-
     @media(max-width: 750px) {
         font-size: 2rem;
     }
-
     @media(max-width: 675px) {
         font-size: 1.7rem;
     }
@@ -182,19 +79,15 @@
     @media(max-width: 1400px) {
         font-size: 1.2rem;
     }
-
     @media(max-width: 1250px) {
         font-size: 1.1rem;
     }
-
     @media(max-width: 950px) {
         font-size: 1.0rem;
     }
-
     @media(max-width: 750px) {
         font-size: 0.9rem;
     }
-
     @media(max-width: 675px) {
         font-size: 0.8rem;
     }
@@ -210,19 +103,15 @@
     @media(max-width: 1400px) {
         font-size: 1.4rem;
     }
-
     @media(max-width: 1250px) {
         font-size: 1.2rem;
     }
-
     @media(max-width: 950px) {
         font-size: 1.1rem;
     }
-
     @media(max-width: 750px) {
         font-size: 1rem;
     }
-
     @media(max-width: 675px) {
         font-size: 0.8rem;
     }
@@ -239,27 +128,22 @@
         width: 570px;
         height: 350px;
     }
-
     @media(max-width: 1250px) {
         width: 520px;
         height: 300px;
     }
-
     @media(max-width: 950px) {
         width: 470px;
         height: 280px;
     }
-
     @media(max-width: 650px) {
         width: 420px;
         height: 250px;
     }
-
     @media(max-width: 500px) {
         width: 310px;
         height: 200px;
     }
-
     @media(max-width: 420px) {
         width: 250px;
         height: 150px;
@@ -282,25 +166,20 @@
     margin-top: 0;
     margin-right: calc(6%);
 
-
     @media(max-width: 1400px) {
         font-size: 2.7rem;
     }
-
     @media(max-width: 1250px) {
         font-size: 2.6rem;
     }
-
     @media(max-width: 950px) {
         font-size: 2.4rem;
         margin-right: calc(7%);
     }
-
     @media(max-width: 750px) {
         font-size: 1.9rem;
         margin-right: calc(8%);
     }
-
     @media(max-width: 675px) {
         font-size: 1.6rem;
     }
@@ -341,20 +220,16 @@
     transform: rotate(-120deg) scale(1.5);
 }
 
-
 .rotateMobil {
     display: block;
     animation: arrowRotationMobil 1s ease-in-out;
     transform: rotate(60deg) scale(1.5);
 }
 
-
-
 @keyframes arrowRotationMobil {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(60deg) scale(1.5);
     }
@@ -364,7 +239,6 @@
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(-120deg) scale(1.5);
     }
@@ -375,12 +249,10 @@
     filter: grayscale(0);
 }
 
-
 @keyframes color {
     from {
         filter: grayscale(1);
     }
-
     to {
         filter: grayscale(0);
     }
@@ -438,12 +310,10 @@ button {
         height: 62px;
         font-size: 1.2rem;
     }
-
     @media(max-width: 950px) {
         height: 57px;
         font-size: 1.1rem;
     }
-
     @media(max-width: 650px) {
         height: 50px;
         font-size: 1rem;

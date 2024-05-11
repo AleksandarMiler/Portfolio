@@ -1,3 +1,5 @@
+@import "../section-portfolio.component.scss";
+
 .project-wrapper {
     display: flex;
     justify-content: space-between;
@@ -16,119 +18,15 @@
         flex-direction: column;
         padding-top: 48px;
     }
+
     @media(max-width: 530px) {
         margin-right: 0; //calc(-12%)
         margin-left: 0;
-
     }
+
     @media(max-width: 375px) {
         margin-right: calc(-5%); //calc(-12%)
         margin-left: 0;
-
-    }
-   
-}
-
-.project-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 475px;
-    opacity: 0;
-
-    @media(max-width: 1250px) {
-        transform: translateX(-575px);
-        transform: translateY(0);
-    }
-
-    @media(max-width: 950px) {
-        transform: translateY(0px);
-        max-width: 470px;
-    }
-
-    @media(max-width: 650px) {
-        max-width: 420px;
-    }
-
-    @media(max-width: 500px) {
-        max-width: 310px;
-    }
-    @media(max-width: 420px) {
-        max-width: 250px;
-    }
-    
-}
-
-.slide {
-    animation: slideAnimation 2s ease-in-out;
-    transform: translateX(0px);
-    opacity: 1;
-}
-
-.slideDown {
-    @media(max-width: 420px) {
-        animation: slideDownAnimationMobile 2s ease-in-out;
-        transform: translateY(50px);
-    }
-    @media(min-width: 421px) and (max-width: 700px) {
-        animation: slideDownAnimationResponsive 2s ease-in-out;
-        transform: translateY(40px);
-    }
-
-    @media(min-width: 701px) and (max-width: 1400px) {
-        animation: slideDownAnimation 2s ease-in-out;
-        transform: translateY(50px);
-    }
-
-    opacity: 1;
-}
-
-.stayDown{
-    animation: slideDownAnimationMobile 2s ease-in-out;
-    transform: translateY(-35px); 
-    opacity: 1;
-}
-
-@keyframes slideDownAnimation {
-    from {
-
-        transform: translateY(-305px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(50px);
-        opacity: 1;
-    }
-}
-
-
-@keyframes slideDownAnimationResponsive  {
-    from {
-
-        transform: translateY(-200px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(40px);
-        opacity: 1;
-    }
-}
-
-
-
-@keyframes slideDownAnimationMobile {
-    from {
-
-        transform: translateY(-130px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(50px);
-        opacity: 1;
     }
 }
 
@@ -260,11 +158,13 @@
         width: 310px;
         height: 200px;
     }
+
     @media(max-width: 420px) {
         width: 250px;
         height: 150px;
     }
 }
+
 .number-container {
     display: flex;
     justify-content: start;
@@ -414,7 +314,7 @@
 }
 
 
-.btn-container{
+.btn-container {
     display: flex;
     width: 100%;
 }
@@ -431,7 +331,6 @@ button {
     cursor: pointer;
     margin-right: 24px;
 
-    
     @media(max-width: 1100px) {
         height: 62px;
         font-size: 1.2rem;
@@ -455,14 +354,14 @@ button {
         animation: btn 2s ease-in-out;
         transform: scale(1.1);
     }
-
 }
 
 @keyframes btn {
-    from{
+    from {
         transform: scale(1);
     }
-    to{
+
+    to {
         transform: scale(1.1);
     }
 }
