@@ -70,10 +70,11 @@
                 @if(checkboxState) {
                 <button type="submit">{{ changeBtnContent() | translate }}</button>
                 } @else{
-                <div class="inactive">{{ changeBtnContent() |  translate }}</div>
+                <div class="inactive" (mouseover)="showInfo()" (mouseout)="hideInfo()" >{{ changeBtnContent() |  translate }}</div>
                 }
             </form> 
         </div>
+        <span class="info-Btn-Activate" [class.show-btn-info]="showBtnInfo">{{ 'ButtonInfo' | translate }}</span>
         <div class="arrow-back-cont" (click)="goUp()"><img src="../../assets/img/icons8-up.png" alt=""></div>
     </div>
     <div class="success-info" [class.start-success-info]="success"><span>{{ 'messageSent' | translate }}!</span> <span>{{ 'thanks' | translate }}!</span></div>

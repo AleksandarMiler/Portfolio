@@ -13,6 +13,7 @@
     left: 0;
     right: 0;
     z-index: 2;
+    max-width: 1920px;
 
     >img {
         width: 40px;
@@ -350,6 +351,7 @@
         padding: 72px;
         margin-left: calc(8%);
         padding-left: 0px !important;
+        cursor: pointer;
 
         @media(max-width: 1400px) {
             font-size: 4.5rem;

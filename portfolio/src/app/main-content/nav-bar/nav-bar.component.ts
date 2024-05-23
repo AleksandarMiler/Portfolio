@@ -27,13 +27,20 @@ export class NavBarComponent {
 
 
   constructor(private elementRef: ElementRef<HTMLElement>, public router: Router, private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+    if (localStorage.getItem('userLanguage') == 'de') {
+      translate.use('de');
+    } else {
+      translate.setDefaultLang('en');
+      translate.use('en');
+      localStorage.setItem('userLanguage', 'en');
+    }
   }
+
 
 
   useLanguage(language: string): void {
     this.translate.use(language);
+    localStorage.setItem('userLanguage', language);
   }
 
 
@@ -45,7 +52,7 @@ export class NavBarComponent {
       if (this.currentImageOpen == 4) {
         clearInterval(interval);
       }
-    }, 300);
+    }, 150);
     setTimeout(() => {
       this.open = false;
       this.currentImageOpen = 0;
@@ -60,7 +67,7 @@ export class NavBarComponent {
       if (this.currentImageClose == 4) {
         clearInterval(interval);
       }
-    }, 300);
+    }, 150);
     setTimeout(() => {
       this.open = true;
       this.currentImageClose = 0;

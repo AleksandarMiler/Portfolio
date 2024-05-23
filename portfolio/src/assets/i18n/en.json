@@ -44,10 +44,14 @@
     "thanks" : "Thank You",
     "Send1" : "Send Message",
     "Send2" : "Say Hello :)",
-    "legal" : "Legal Notice",
+    "legal" : "Imprint",
     "start" : "Start Page",
     "skills" : "My Skills", 
-    "sayHi" : "Say Hi"
+    "sayHi" : "Say Hi",
+    "ButtonInfo" : "In order to send the message, please accept the privacy policy",
+    "contactInfo" : "Contact",
+    "telefonInfo" : "Phone",
+    "source" : "Source"
 
 
 }

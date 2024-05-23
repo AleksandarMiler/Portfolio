@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    width: 100vw;
+    max-width: 1920px;
     overflow-x: hidden;
 }
 
@@ -8,29 +8,6 @@ body {
 .d-none {
     display: none;
 }
-
-// /* width */
-// ::-webkit-scrollbar {
-//     width: 10px;
-    
-//   }
-  
-//   /* Track */
-//   ::-webkit-scrollbar-track {
-//     background: #FFFCF3; 
-//   }
-   
-//   /* Handle */
-//   ::-webkit-scrollbar-thumb {
-//     background: black; 
-//     border-radius: 35px;
-//     cursor: pointer;
-//   }
-  
-//   /* Handle on hover */
-//   ::-webkit-scrollbar-thumb:hover {
-//     background: #FF9900; 
-//   }
 
 @keyframes burger-menu {
     from {

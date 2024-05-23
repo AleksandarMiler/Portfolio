@@ -13,17 +13,19 @@ export class LandingPageComponent {
   selected = false;
   arrowIsDown = true;
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
-  }
+  // constructor(private translate: TranslateService) {
+  //   translate.setDefaultLang('en');
+  //   translate.use('en');
+  // }
 
 
   moveToContactSection() {
     setTimeout(() => {
       this.selected = true;
+      this.goDown();
     }, 500)
     this.turnSelectedOff();
+    
   }
 
 
@@ -34,9 +36,16 @@ export class LandingPageComponent {
   }
 
 
-  useLanguage(language: string): void {
-    this.translate.use(language);
+  // useLanguage(language: string): void {
+  //   this.translate.use(language);
+  // }
+
+  
+  goDown() {
+    const element: any = document.getElementById('contact');
+    element.scrollIntoView({ behavior: "smooth" });
   }
+
 }
 
 

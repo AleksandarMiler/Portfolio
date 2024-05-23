@@ -32,12 +32,6 @@ export class AboutMeComponent {
   }
 
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
-  }
-
-
   startAnimationArrow() {
     let interval = setInterval(() => {
       this.currentArrow++;

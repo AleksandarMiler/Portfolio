@@ -19,10 +19,10 @@ export class SectionPortfolioComponent {
   currentArrow: number = 0;
 
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
-  }
+  // constructor(private translate: TranslateService) {
+  //   translate.setDefaultLang('en');
+  //   translate.use('en');
+  // }
 
 
   scrollEvent = (event: any): void => {

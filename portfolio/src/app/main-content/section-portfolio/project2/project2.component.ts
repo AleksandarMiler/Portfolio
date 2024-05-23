@@ -15,10 +15,10 @@ export class Project2Component {
   public innerWidth: any;
 
   
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
-  }
+  // constructor(private translate: TranslateService) {
+  //   translate.setDefaultLang('en');
+  //   translate.use('en');
+  // }
   
 
   ngOnInit() {

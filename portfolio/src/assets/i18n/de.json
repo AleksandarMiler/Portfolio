@@ -44,8 +44,12 @@
     "thanks" : "Danke Ihnen",
     "Send1" : "Nachricht Schicken",
     "Send2" : "Hallo Sagen:)",
-    "legal" : "Daten Schutz",
+    "legal" : "Impressum",
     "start" : "Start Seite",
     "skills" : "Meine Skills", 
-    "sayHi" : "Sag Hallo"
+    "sayHi" : "Sag Hallo",
+    "ButtonInfo" : "Um Nachricht schicken zu können, akzeptieren Sie bitte die Datenschutzerklärung",
+    "contactInfo" : "Kontakt",
+    "telefonInfo" : "Telefon",
+    "source" : "Quelle"
 }

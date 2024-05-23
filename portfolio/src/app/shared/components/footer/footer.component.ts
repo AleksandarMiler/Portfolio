@@ -11,9 +11,11 @@ import { TranslateService, TranslateModule } from "@ngx-translate/core";
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  constructor(public router: Router, private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+  
+  constructor(public router: Router) {
+    // , private translate: TranslateService
+    // translate.setDefaultLang('en');
+    // translate.use('en');
   }
 
   public originalText = 'Aleksandar Miler 2024';

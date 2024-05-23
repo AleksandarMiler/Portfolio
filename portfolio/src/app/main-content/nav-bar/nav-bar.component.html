@@ -33,7 +33,7 @@
     </div>
 </div>
 <div class="footer-menu" [ngClass]="{'hide-menu': !buttonPressed && appearanceCount > 0,' show-menu': buttonPressed}">
-    <div class="headline-wrapper"><span>{{ 'sayHi' | translate }}!</span></div>
+    <div class="headline-wrapper"><span (click)="goToSection('contact')">{{ 'sayHi' | translate }}!</span></div>
     <div class="footer-wrapper">
         <div class="left">
             <span *ngIf="hasRoute()" (click)="goToSection('contact')"

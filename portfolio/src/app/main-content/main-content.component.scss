@@ -13,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     @media(max-width: 900px) {
         width: 242px;
@@ -69,9 +70,11 @@
     @media(max-width: 700px) {
         right: calc(2%);
     }
+
     @media(max-width: 550px) {
         display: none;
     }
+
     &:hover {
         transform: translateY(4px);
     }
@@ -100,10 +103,12 @@
         flex-direction: column;
         width: 470px;
     }
+
     @media(max-width: 900px) {
         width: 350px;
         font-size: 1.2rem;
     }
+
     @media(max-width: 650px) {
         width: 250px;
         font-size: 1rem;
@@ -112,17 +117,56 @@
 }
 
 .start-success-info {
-    animation: success 3s ease-in-out;
+    animation: success 6s ease-in-out;
 }
 
 @keyframes success {
     0% {
         transform: translateY(645%);
     }
+
     50% {
         transform: translateY(130%);
     }
+
+    60% {
+        transform: translateY(130%);
+     }
+
+     70% {
+        transform: translateY(130%);
+    }
+
     100% {
         transform: translateY(645%);
+    }
+}
+
+.info-Btn-Activate {
+    background-color: #BBBBBB;
+    margin-top: 24px;
+    border: 3px solid #BBBBBB;
+    background-color: black;
+    font-family: "Overpass";
+    font-weight: 300;
+    font-size: 19px;
+    color: #BBBBBB;
+    width: 275px;
+    padding: 8px;
+    text-align: center;
+    opacity: 0;
+}
+
+.show-btn-info {
+    animation: 2s btn-info ease-in-out;
+    opacity: 1;
+}
+
+@keyframes btn-info {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

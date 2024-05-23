@@ -20,6 +20,7 @@ export class ContactComponent implements OnInit {
   checkboxCount: number = 0;
   success: boolean = false;
   public innerWidth: any;
+  showBtnInfo: boolean = false;
 
 
   @HostListener('window:resize', ['$event'])
@@ -28,8 +29,8 @@ export class ContactComponent implements OnInit {
     this.innerWidth = window.innerWidth;
   }
   constructor(private elementRef: ElementRef<HTMLElement>, private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+    // translate.setDefaultLang('en');
+    // translate.use('en');
   }
 
   ngOnInit() {
@@ -124,5 +125,13 @@ export class ContactComponent implements OnInit {
     } else {
       return 'Send2'
     }
+  }
+
+  showInfo() {
+    this.showBtnInfo = true;
+  }
+
+  hideInfo() {
+    this.showBtnInfo = false;
   }
 }
