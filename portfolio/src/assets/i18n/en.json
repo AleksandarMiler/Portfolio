@@ -38,6 +38,7 @@
     "enterMessage" : "Please enter your message",
     "acceptPolicy" : "Please accept the privacy policy",
     "privacyPolicy1" : "I've read",
+    "privacypolicyBreak": "",
     "justPrivacy" : "the privacy policy",
     "privacyPolicy2" : "and agree of processing my data as outlined",
     "messageSent" : "Your Message has been sent",

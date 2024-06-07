@@ -1,3 +1,4 @@
+<div class="navi-wrapper">
 <div class="nav-bar-container">
     <div class="outside-box logo dark" (click)="goToSection('contact')">
         <div class="arm1"></div>
@@ -16,6 +17,8 @@
             src="../../assets/img/{{ closingImages[currentImageClose]}}">
     </div>
 </div>
+</div>
+<div class="navi-sub-wrapper" [class.d-flex]="showDropMenu">
 <div class="menu" [ngClass]="{'hide-menu': !buttonPressed && appearanceCount > 0,' show-menu': buttonPressed}">
     <div class="links-wrapper">
         <span *ngIf="hasRoute()" (click)="goToSection('aboutMe')" id="aboutMe1">{{ 'aboutMe' | translate }} <span class="frame"
@@ -33,6 +36,7 @@
     </div>
 </div>
 <div class="footer-menu" [ngClass]="{'hide-menu': !buttonPressed && appearanceCount > 0,' show-menu': buttonPressed}">
+    <div class="elements">
     <div class="headline-wrapper"><span (click)="goToSection('contact')">{{ 'sayHi' | translate }}!</span></div>
     <div class="footer-wrapper">
         <div class="left">
@@ -46,4 +50,6 @@
                     src="../../assets/img/Linkedin.png"></div>
         </div>
     </div>
+</div>
+</div>
 </div>

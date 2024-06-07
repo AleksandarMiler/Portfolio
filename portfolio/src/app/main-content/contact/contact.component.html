@@ -65,7 +65,7 @@
                     <span class="check-box-alert">{{ 'acceptPolicy' | translate }}</span>
                     }
 
-                    {{ 'privacyPolicy1' | translate }} <a href="PrivacyPolicy">{{ 'justPrivacy' | translate }}</a> {{ 'privacyPolicy2' | translate }}
+                    {{ 'privacyPolicy1' | translate }} <a href="PrivacyPolicy">{{ 'justPrivacy' | translate }}</a>{{ 'privacypolicyBreak' | translate }} {{ 'privacyPolicy2' | translate }}
                 </div>
                 @if(checkboxState) {
                 <button type="submit">{{ changeBtnContent() | translate }}</button>

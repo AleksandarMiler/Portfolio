@@ -15,6 +15,8 @@ export class NavBarComponent {
   closingImages = ['burger5.png', 'burger6.png', 'burger7.png', 'burger8.png', 'burger.png'];
   open = true;
   buttonPressed: boolean = false;
+  showDropMenu: boolean = false;
+  startAnimate: boolean = false;
 
   currentImageOpen: number = 0;
   currentImageClose: number = 0;
@@ -46,32 +48,39 @@ export class NavBarComponent {
 
   startAnimationOpen() {
     this.buttonPressed = true;
+    this.showDropMenu = true;
+    // this.startAnimate = true;
     this.appearanceCount++;
     let interval = setInterval(() => {
-      this.currentImageOpen++;
+      // this.startAnimate = true;
+       this.currentImageOpen++;
+      // setTimeout(() => {
+      //   this.startAnimate = false;
+      // }, 200);
       if (this.currentImageOpen == 4) {
         clearInterval(interval);
       }
-    }, 150);
+    }, 100);
     setTimeout(() => {
       this.open = false;
       this.currentImageOpen = 0;
-    }, 1500);
+    }, 600);
   }
 
 
   startAnimationClose() {
     this.buttonPressed = false;
+    this.hideMenu();
     let interval = setInterval(() => {
       this.currentImageClose++;
       if (this.currentImageClose == 4) {
         clearInterval(interval);
       }
-    }, 150);
+    }, 100);
     setTimeout(() => {
       this.open = true;
       this.currentImageClose = 0;
-    }, 1500);
+    }, 600);
   }
 
 
@@ -125,6 +134,11 @@ export class NavBarComponent {
     }
   }
 
+  hideMenu() {
+    setTimeout(() => {
+      this.showDropMenu = false;
+    }, 1000);
+  }
 }
 
 

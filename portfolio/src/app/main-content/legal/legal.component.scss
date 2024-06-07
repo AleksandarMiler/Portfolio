@@ -2,3 +2,9 @@
 .f-21 {
     font-size: 21px;
 }
+
+@media(max-width: 460px) {
+    .f21 {
+        font-size: 18px;
+    }
+}
